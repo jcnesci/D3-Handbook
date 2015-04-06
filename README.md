@@ -34,7 +34,7 @@ There are exceptions, however -- I prefer other tactics to theirs on occasion --
 ```javascript
 patentObjects = JSON.parse(JSON.stringify( iPatentObjects ));
 ```
-it is faster and will in fact deep clone nested objects, IF they are basic types (ints, etc). But it won’t for custom types.
+	- it is faster and will in fact deep clone nested objects, IF they are basic types (ints, etc). But it won’t for custom types.
 		- Performance comparison:
 			- https://jsperf.com/lodash-copy-vs-json-stringify-parse
 			- Of course, if you know the structure of the object you anticipate cloning, the best solution is to build a custom cloning yourself ([see 2nd answer](http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-an-object)) for your object properties, which gives the fastest result. See benchmark.
