@@ -34,6 +34,7 @@ There are exceptions, however -- I prefer other tactics to theirs on occasion --
 ```javascript
 patentObjects = JSON.parse(JSON.stringify( iPatentObjects ));
 ```
+
 	it is faster and will in fact deep clone nested objects, IF they are basic types (ints, etc). But it won’t for custom types.
 		- Performance comparison:
 			- https://jsperf.com/lodash-copy-vs-json-stringify-parse
@@ -41,7 +42,7 @@ patentObjects = JSON.parse(JSON.stringify( iPatentObjects ));
 	- [Sorting](http://learnjsdata.com/iterate_data.html):
 	- if you have an array of complex objects that you want to reverse the sorting on (ex: it’s in ascending but you want descending) as they say d3.ascending/d3.descending won't work, but you can use the native JS Array.reverse() function:
 ```javascript
-		filteredPatentObjects.reverse();
+filteredPatentObjects.reverse();
 ```
 
 
