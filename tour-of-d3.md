@@ -28,7 +28,7 @@ D3 is many things, but also isn't many things.
 
 Once you're used to it, D3 is great for taking a bunch of data and throwing it up on the page, to see what it looks like.
 
-At Soso, we use it mainly for 2 things:**
+At Soso, we use it mainly for 2 things:
 - to quickly **see the data**, get a sense of its shape, and understand what deeper meaning it may hold or what "stories" could emerge from it.
 	- this often leads us to the creation of a _dashboard_ to see and browse the data, which is also a great tool for the client.
 - to quickly **create a prototype** of a more complex app that want to eventually create.
