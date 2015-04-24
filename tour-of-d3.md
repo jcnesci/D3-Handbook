@@ -3,8 +3,10 @@
 **Table of Contents**
 - What is D3?
 - The Basics
-- Attaching Element to the Page
+- Attaching Elements to the Page
 - Transforming the Data
+- Transitioning & Animating the Data
+- Graphs built into D3
 - Performance Limits
 - Next Steps
 
@@ -37,7 +39,7 @@ At Soso, we use it mainly for 2 things:
 Once you're used to it, D3 really is great for taking a bunch of data and throwing it up on the page, to see what it looks like.
 
 
-## Attaching Element to the Page
+## Attaching Elements to the Page
 
 _WIP: usually SVG, data-join pattern._
 
@@ -45,7 +47,6 @@ _WIP: usually SVG, data-join pattern._
 ## Transforming the Data
 
 _WIP: talk about my most used functions._
-
 
 ### Further Details
 
@@ -76,6 +77,21 @@ There are exceptions, however -- I prefer other tactics to theirs on occasion --
 #### Benchmarking performance
 
 _WIP: jsperf is cometimes useful_
+
+
+## Transitioning & Animating the Data
+
+_WIP_
+
+
+## Graphs built into D3
+
+_WIP_
+
+
+## Performance Limits
+
+_WIP_
 
 
 ## Next Steps
