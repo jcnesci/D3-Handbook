@@ -109,3 +109,8 @@ _WIP: webgl, pixi.js, three.js, openVizConf videos about that_
 ### Using D3 with other frameworks
 
 _WIP: MVC (react.js, link openVizConfVideo, Swizec Teller book), multiple file loading and concurrency with Queue.js, etc._
+
+### Potentially useful libraries
+
+_WIP: MISO, NVD3, etc? see scott murray's book for more._
+
