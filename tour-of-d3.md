@@ -46,7 +46,7 @@ _WIP: usually SVG, data-join pattern._
 
 ## Transforming the Data
 
-_WIP: talk about my most used functions._
+_WIP: talk about my most used functions. My must-have libraries (underscore, moment)._
 
 ### Further Details
 
