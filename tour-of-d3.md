@@ -8,6 +8,7 @@
 - Performance Limits
 - Next Steps
 
+
 ## What is D3?
 
 [D3.js](http://d3js.org/) is a Javascript library.
@@ -18,6 +19,7 @@ It can be used for generating quite advanced charts too (like [maps](http://bl.o
 
 As I explain things, I will often refer to Scott Murray's fantastic (and free!) online book, [found here](http://chimera.labs.oreilly.com/books/1230000000345/index.html).
 
+
 ## The Basics
 
 D3 is many things, but also isn't many things.
@@ -26,21 +28,24 @@ D3 is many things, but also isn't many things.
 - It can **transform** you data in many ways so it's ready to produce graphs.
 - It can **transition** your elements between states, in reaction to user input, and **animate** those elements.
 
-Once you're used to it, D3 is great for taking a bunch of data and throwing it up on the page, to see what it looks like.
-
 At Soso, we use it mainly for 2 things:
 - to quickly **see the data**, get a sense of its shape, and understand what deeper meaning it may hold or what "stories" could emerge from it.
 	- this often leads us to the creation of a _dashboard_ to see and browse the data, which is also a great tool for the client.
 - to quickly **create a prototype** of a more complex app that want to eventually create.
 	- the prototype could be a 1st phase in a large project for which the final product is a robust C++ app.
 
+Once you're used to it, D3 really is great for taking a bunch of data and throwing it up on the page, to see what it looks like.
+
+
 ## Attaching Element to the Page
 
 _WIP: usually SVG, data-join pattern._
 
+
 ## Transforming the Data
 
 _WIP: talk about my most used functions._
+
 
 ### Further Details
 
@@ -71,6 +76,7 @@ There are exceptions, however -- I prefer other tactics to theirs on occasion --
 #### Benchmarking performance
 
 _WIP: jsperf is cometimes useful_
+
 
 ## Next Steps
 
