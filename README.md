@@ -9,7 +9,7 @@
 
 What can D3 do for you? Check out the **Examples** to find out.
 
-Just getting started? Take the **Tour** to learn more about how to use D3.js.
+Just getting started? Take the **Tour** to learn about how to use D3.js.
 
 Looking for tools, or want more? That's the **Resources**.
 
