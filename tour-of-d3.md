@@ -58,15 +58,30 @@ There are exceptions, however -- I prefer other tactics to theirs on occasion --
 
 #### Exceptions:
 - [Deep Cloning](http://learnjsdata.com/iterate_data.html):
-	- for deep cloning, sometimes the lodash deepClone function doesn’t work or takes a really long time to complete. That’s why I’ve taken the habit of using this trick instead:
+	- for collection of objects with only basic property types (ints, strings, etc -- but not Date objs, and other complex types), that can also be nested (ie. "deep"), use:
 
 	```javascript
-	patentObjects = JSON.parse(JSON.stringify( iPatentObjects ));
+	var deepPrimitiveCopy = JSON.parse(JSON.stringify( dataObject ));
 	```
 
-	- it is faster and will in fact deep clone nested objects, IF they are basic types (ints, etc). But it won’t for custom types. **_WARNING: it will mess up Date objects._**
+	- for collection with complex property types, that is not nested (ie. not "deep") use lodash:
+
+	```javascript
+	var shallowCopy = _.clone(dataObject);
+	```
+
+	- for collection with complex property types, that is nested (ie. "deep") use lodash:
+
+	```javascript
+	var deepCopy = _.clone(dataObject, true);
+	// or
+	var deepCopy = _.cloneDeep(dataObject);
+	```
+
+	- NB:
 		- [Performance comparison](https://jsperf.com/lodash-copy-vs-json-stringify-parse)
-		- Of course, if you know the structure of the object you anticipate cloning, the best solution is to build a custom cloning yourself ([see 2nd answer here](http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-an-object)) for your object properties, which gives the fastest result. See benchmark.
+		- [All-time quickest cloning method](http://stackoverflow.com/a/5344074/2543345) is to write your own custom cloner, if you know in advance what the structure of the data will be like.
+
 - [Sorting](http://learnjsdata.com/iterate_data.html):
 	- if you have an array of complex objects that you want to reverse the sorting on (ex: it’s in ascending but you want descending) as they say d3.ascending/d3.descending won't work, but you can use the native JS Array.reverse() function:
 
