@@ -27,7 +27,7 @@ As I explain things, I will often refer to Scott Murray's fantastic (and free!) 
 D3 is many things, but also isn't many things.
 - It can **load data** files in the browser so you can use it for your graphs/etc.
 - It can **attach** elements to the browser's DOM based on that data.
-- It can **transform** you data in many ways so it's ready to produce graphs.
+- It can **transform** your data in many ways so it's ready to produce graphs.
 - It can **transition** your elements between states, in reaction to user input, and **animate** those elements.
 
 At Soso, we use it mainly for 2 things:
