@@ -8,6 +8,7 @@ Informative / Classic dataviz
 Artsy / Interactive art projects
 - http://drones.pitchinteractive.com/
 - http://www.therefugeeproject.org/
+- http://stereotropes.bocoup.com/
 
 Geeky / Technically impressive
 - http://bost.ocks.org/mike/algorithms/
