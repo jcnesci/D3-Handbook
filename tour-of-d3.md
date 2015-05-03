@@ -15,23 +15,11 @@
 
 ## What is D3?
 
-[D3.js](http://d3js.org/) is a Javascript library.
-D3 is for binding data to DOM elements.
-It can be used for generating [basic charts](https://github.com/mbostock/d3/wiki/Gallery#basic-charts).
-It can be used for [animating things](http://bl.ocks.org/mbostock/1256572).
-It can be used for generating quite advanced charts too (like [maps](http://bl.ocks.org/r4vi/4185745), [force-layouts](http://bl.ocks.org/mbostock/929623), and many other [weird chart types](http://bost.ocks.org/mike/uberdata/)).
-
-As I explain things, I will often refer to Scott Murray's fantastic (and free!) online book, [found here](http://chimera.labs.oreilly.com/books/1230000000345/index.html).
-
-
-## The Basics
-
-D3 is many things, but also isn't many things.
-- It can **load data** files in the browser so you can use it for your graphs/etc.
-- It can **attach** elements to the browser's DOM based on that data.
-- It can **transform** your data in many ways so it's ready to be used in a graph.
-- It can **transition** your elements between states, and **animate** those elements.
-- And, as a bonus, it can create a few **preset graph types** for you, although it is often used as a low-level tool to create your own types of graphs.
+- [D3.js](http://d3js.org/) is a Javascript library.
+- it's for binding data to DOM elements.
+- it can be used for basic charts ([1](http://bl.ocks.org/mbostock/3883245), [2](http://bl.ocks.org/mbostock/3885304), [3](http://bl.ocks.org/mbostock/3887118)).
+- it can be used for animations ([1](http://bl.ocks.org/mbostock/1125997), [2](http://bl.ocks.org/mbostock/1256572)).
+- it can be used for advanced charts too (like [maps](http://bl.ocks.org/r4vi/4185745), [force-layouts](http://bl.ocks.org/mbostock/929623), and many other [weird chart types](http://bost.ocks.org/mike/uberdata/)).
 
 At Soso, we use it mainly for 2 things:
 - to quickly **see the data**, get a sense of its shape, and understand what deeper meaning it may hold or what "stories" could emerge from it.
@@ -40,6 +28,20 @@ At Soso, we use it mainly for 2 things:
 	- the prototype could be a 1st phase in a large project for which the final product is a robust C++ app.
 
 Once you're used to it, D3 really is great for taking a bunch of data and throwing it up on the page, to see what it looks like.
+
+
+## The Basics
+
+As I explain things, I will often refer to Scott Murray's fantastic (and free!) online book, [found here](http://chimera.labs.oreilly.com/books/1230000000345/index.html).
+
+Not to sound repetitive, but here are the things we use D3 for:
+- It can **load data** files in the browser so you can use it for your graphs/etc.
+- It can **attach** elements to the browser's DOM based on that data.
+- It can **transform** your data in many ways so it's ready to be used in a graph.
+- It can **transition** your elements between states, and **animate** those elements.
+- And, as a bonus, it can create a few **preset graph types** for you, although it is often used as a low-level tool to create your own types of graphs.
+
+
 
 
 ## A Fast Track Lesson
@@ -56,9 +58,11 @@ For understanding the trickier parts, I will break it down, below.
 
 _WIP: usually SVG, data-join pattern._
 
-With D3, you can attach HTML or SVG elements to the page. Usually, people use SVG elements, as they provide primitive shapes already (lines, circles, rectangles, etc) and are vector-based (meaning, they are always crisp, no matter if you scale them, and never pixelated).
+With D3, you can attach HTML or SVG elements to the page. Usually, people use SVG elements, as SVG provides primitive shapes already (lines, circles, rectangles, etc) and are vector-based (meaning, they are always crisp, no matter if you scale them, and never pixelated).
 
 The key to understanding how D3 attaches elements to the page, is to understand the 3 stages of [the data-join](http://bost.ocks.org/mike/join/) : enter, update, and exit.
+
+Here's a [good example](http://bl.ocks.org/mbostock/3808218) of how it works, by Mike Bostock.
 
 _... TO BE CONTINUED_
 
