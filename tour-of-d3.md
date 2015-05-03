@@ -34,19 +34,23 @@ Once you're used to it, D3 really is great for taking a bunch of data and throwi
 
 As I explain things, I will often refer to Scott Murray's fantastic (and free!) online book, [found here](http://chimera.labs.oreilly.com/books/1230000000345/index.html).
 
-Not to sound repetitive, but here are the things we use D3 for:
-- It can **load data** files in the browser so you can use it for your graphs/etc.
-- It can **attach** elements to the browser's DOM based on that data.
-- It can **transform** your data in many ways so it's ready to be used in a graph.
-- It can **transition** your elements between states, and **animate** those elements.
-- And, as a bonus, it can create a few **preset graph types** for you, although it is often used as a low-level tool to create your own types of graphs.
+- [Attaching an element to the page](https://jsfiddle.net/jcnesci/fr3zudy2/)
+- [The Data-Join: attaching elements based on data](https://jsfiddle.net/jcnesci/2vL9naby/)
+	- [How it works](https://jsfiddle.net/jcnesci/6k7ovycs/)
+	- [Proof that data is attached to the DOM elements](https://jsfiddle.net/jcnesci/7jndkbdh/1/)
+	- [How to use said data stored in each DOM element](https://jsfiddle.net/jcnesci/g2j0fhgs/1/)
+- [Attaching SVG elements](https://jsfiddle.net/jcnesci/c89zfymm/)
+- The General Update Pattern
+	- The general update pattern defines how **new items are attached** to the DOM, how **existing items are updated**, and how **old items are removed**.
+	- [Enter](https://jsfiddle.net/jcnesci/sejcqw6f/)
+	- [Enter, Update](https://jsfiddle.net/jcnesci/qnwttLux/1/)
+	- [Enter, Update, Exit](https://jsfiddle.net/jcnesci/oxnskb4w/)
 
+The data-join and general update pattern are the keys to working with D3 as they are the nuts & bolts of everything.
 
+Beyond that, every type of graph you'll want to make (eg. a barchart, a scatterplot, a map, or a force-directed graph) will require different strategies, D3 methods, etc. But there is a lot of overlap for most graphs, which use the same principles.
 
-
-## A Fast Track Lesson
-
-Here's a quick primer via a [small tutorial](http://chimera.labs.oreilly.com/books/1234000002001/index.html) by Scott Murray. All the basics are there. If you want more, I recommend looking at the sections of his book.
+For example, here's a [basic intro tutorial](http://chimera.labs.oreilly.com/books/1234000002001/index.html) by Scott Murray that introduces axes and scales while creating a scatterplot.
 
 For understanding the trickier parts, I will break it down, below.
 
