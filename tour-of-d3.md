@@ -3,7 +3,6 @@
 **Table of Contents**
 - What is D3?
 - The Basics
-- A Fast Track Lesson
 - A More Detailed Explanation
 	- Attaching Elements to the Page
 	- Transforming the Data
@@ -60,13 +59,11 @@ For understanding the trickier parts, I will break it down, below.
 
 ### Attaching Elements to the Page
 
-_WIP: usually SVG, data-join pattern._
-
 With D3, you can attach HTML or SVG elements to the page. Usually, people use SVG elements, as SVG provides primitive shapes already (lines, circles, rectangles, etc) and are vector-based (meaning, they are always crisp, no matter if you scale them, and never pixelated).
 
-The key to understanding how D3 attaches elements to the page, is to understand the 3 stages of [the data-join](http://bost.ocks.org/mike/join/) : enter, update, and exit.
-
-Here's a [good example](http://bl.ocks.org/mbostock/3808218) of how it works, by Mike Bostock.
+More resources for understanding how the data-join & general update pattern work:
+- http://bost.ocks.org/mike/join/
+- http://bl.ocks.org/mbostock/3808218
 
 _... TO BE CONTINUED_
 
