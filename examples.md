@@ -9,6 +9,7 @@ Artsy / Interactive art projects
 - http://drones.pitchinteractive.com/
 - http://www.therefugeeproject.org/
 - http://stereotropes.bocoup.com/
+- http://earth.nullschool.net/
 
 Geeky / Technically impressive
 - http://bost.ocks.org/mike/algorithms/

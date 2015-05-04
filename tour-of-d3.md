@@ -47,7 +47,7 @@ As I explain things, I will often refer to Scott Murray's fantastic (and free!) 
 
 The data-join and general update pattern are the keys to working with D3 as they are the nuts & bolts of everything.
 
-Beyond that, every type of graph you'll want to make (eg. a barchart, a scatterplot, a map, or a force-directed graph) will require different strategies, D3 methods, etc. But there is a lot of overlap for most graphs, which use the same principles.
+Beyond that, every type of graph you'll want to make (eg. a [linechart](http://bl.ocks.org/mbostock/3883245), a [barchart](http://bl.ocks.org/mbostock/3885304), a [scatterplot](http://bl.ocks.org/mbostock/3887118), a [map](http://bost.ocks.org/mike/map/), or a [force-directed graph](http://bl.ocks.org/mbostock/4062045)) will require different strategies, D3 methods, etc., although most use the same principles.
 
 For example, here's a [basic intro tutorial](http://chimera.labs.oreilly.com/books/1234000002001/index.html) by Scott Murray that introduces axes and scales while creating a scatterplot.
 
@@ -63,17 +63,13 @@ With D3, you can attach HTML or SVG elements to the page. Usually, people use SV
 
 More resources for understanding how the data-join & general update pattern work:
 - http://bost.ocks.org/mike/join/
-- http://bl.ocks.org/mbostock/3808218
+- http://bl.ocks.org/mbostock/3808234
+- http://bost.ocks.org/mike/selection/
 
-_... TO BE CONTINUED_
 
 ### Transforming the Data
 
-_WIP: talk about my most used functions. My must-have libraries (underscore, moment)._
-
-Ok, first off, you have data (in a file, from a streaming endpoint, etc). It rarely is formatted exactly how you want it in order to create a graph with it. You need to transform it.
-
-Let's say your data is an array of books. Sorting the data by publication date is a transformation. Or grouping the books by category is another transformation.
+Transforming the data means things like sorting, grouping, rearranging, or making new calculations on your data for use in a graph. Rarely do you get data (from a file, or a stream) exactly how you need it for graphing. If your data is a collection of book records, it'll likely not be sorted by publication date already. Or what if you want to just graph how many books each author has written. These are _transformations_.
 
 #### Libraries
 
@@ -93,64 +89,25 @@ D3 can be used for some sorts of transformations. But you'll often need other li
 
 _... TO BE CONTINUED_
 
-I defer all explanations of how to transform data to http://learnjsdata.com/ since they cover everything (see below).
+#### Going Deeper
 
-#### More Tips & Tricks
-
-The guys at Bocoup wrote a great guide for parsing data in JS. Our parsing tactics are very very similar, so I recommend we use it as a guide for various ways to parse various things.
-
-http://learnjsdata.com/
-
-There are exceptions, however -- I prefer other tactics to theirs on occasion -- and they will be posted here. Feel free to do the same if you notice a better way to do things.
-
-##### Exceptions:
-- [Deep Cloning](http://learnjsdata.com/iterate_data.html):
-	- for collection of objects with only basic property types (ints, strings, etc -- but not Date objs, and other complex types), that can also be nested (ie. "deep"), use:
-
-	```javascript
-	var deepPrimitiveCopy = JSON.parse(JSON.stringify( dataObject ));
-	```
-
-	- for collection with complex property types, that is not nested (ie. not "deep") use lodash:
-
-	```javascript
-	var shallowCopy = _.clone(dataObject);
-	```
-
-	- for collection with complex property types, that is nested (ie. "deep") use lodash:
-
-	```javascript
-	var deepCopy = _.clone(dataObject, true);
-	// or
-	var deepCopy = _.cloneDeep(dataObject);
-	```
-
-	- NB:
-		- [Performance comparison](https://jsperf.com/lodash-copy-vs-json-stringify-parse)
-		- [All-time quickest cloning method](http://stackoverflow.com/a/5344074/2543345) is to write your own custom cloner, if you know in advance what the structure of the data will be like.
-
-- [Sorting](http://learnjsdata.com/iterate_data.html):
-	- if you have an array of complex objects that you want to reverse the sorting on (ex: it’s in ascending but you want descending) as they say d3.ascending/d3.descending won't work, but you can use the native JS Array.reverse() function:
-
-	```javascript
-	filteredPatentObjects.reverse();
-	```
-
-##### Benchmarking performance
-
-If you need to evaluate the performance of your code, you can use the web developer console in Chrome.
-
-If you need to pit two snippets of code against each other, to see which performs best, you can use https://jsperf.com/
+I defer 99% of explanations on how to transform data to http://learnjsdata.com/ since they really do cover everything. However, I do sometimes recommend other tactics for certain transformations, which you can read here:
+- [More On Transformations](transformations.md)
 
 
 ### Transitioning & Animating the Data
 
-_WIP_
+More examples for animating and transitioning:
+- http://bl.ocks.org/mbostock/1125997
+- http://bl.ocks.org/mbostock/1256572
+
+_... TO BE CONTINUED_
 
 
 ## Graphs built into D3
 
-D3 provides the following [layouts](https://github.com/mbostock/d3/wiki/Layouts) that generate pre-made graphs for you, if you feed them the data correctly (each layout wants its data in different ways). See the [examples gallery](https://github.com/mbostock/d3/wiki/Gallery) for ideas of what they can look like.
+D3 provides the following [layouts](https://github.com/mbostock/d3/wiki/Layouts) that generate pre-made graphs for you, if you feed them the data correctly (each layout wants its data in different ways).
+- See the [examples gallery](https://github.com/mbostock/d3/wiki/Gallery) for ideas of what they can look like.
 
 
 ## Performance Limits
